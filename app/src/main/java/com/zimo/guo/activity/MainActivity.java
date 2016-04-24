@@ -13,7 +13,7 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity implements LoadingBannerView{
+public class MainActivity extends AppCompatActivity implements LoadingBannerView {
 
     @Bind(R.id.show_banner_string)
     TextView showBanner;
@@ -32,9 +32,7 @@ public class MainActivity extends AppCompatActivity implements LoadingBannerView
 
     @Override
     public void showData(List<BannerVO> bannerVOs) {
-        for (int i = 0;i<bannerVOs.size();i++){
-            showBanner.setText(bannerVOs.get(i).getPicUrl());
-        }
+        showBanner.setText(bannerVOs.get(0).getPicUrl());
     }
 
     @Override
